@@ -17,10 +17,14 @@ const generateGrid = (numberOfSquares) => {
             const square = document.createElement("div");
             square.classList.add("square");
             square.id = `square${letter}${i}`;
-            square.addEventListener("mouseover", () => {square.style.backgroundColor = "blue"})
+            square.addEventListener("mouseover", () => {square.style.backgroundColor = `rgb(${randomRGB()}, ${randomRGB()}, ${randomRGB()})`})
             column.appendChild(square);
         }
     }
+}
+
+const randomRGB = () => {
+    return Math.floor(Math.random() * 256)
 }
 
 generateGrid(numberOfSquares)

@@ -3,6 +3,13 @@ TOP
 My grid works and fulfills the user stories
 In terms of further optomizing I would look to seperate concerns better in the generateGrid
 
+EXTRAS 
+
+Transform the behavior of a square when interacting with the mouse by introducing a series of modifications.
+
+Rather than squares being the same color throughout the grid, randomize the squares’ RGB values with each interaction.
+Additionally, implement a progressive darkening effect where each interaction adds 10% more black or color to the square. The objective is to achieve a completely black square only after ten interactions.
+
 INSTRUCTIONS
 
 Follow the instructions atop Odin’s Recipes project to set up a Git repository for this project.
