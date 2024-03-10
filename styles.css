@@ -1,0 +1,15 @@
+
+.grid-container {
+   
+}
+
+.column {
+    display: flex;
+}
+
+.square {
+    background-color: red;
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+}
