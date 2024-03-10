@@ -4,6 +4,28 @@ const resetBtn = document.querySelector("#reset-btn")
 
 numberOfSquares = 16
 
+// const colorSquare = (el) => {
+//     el.style.backgroundColor = `rgb(${randomRGB()}, ${randomRGB()}, ${randomRGB()})`;
+// }
+
+
+// -- The code below satisfies the randomisation of colors on first interactions and then the darkening of this on subsequent -- 
+// const colorSquare = (el) => {
+//     if (!el.classList.contains("colored")) {
+//     el.style.backgroundColor = `rgb(${randomRGB()}, ${randomRGB()}, ${randomRGB()})`;
+//     el.classList.add("colored")
+//     } else {
+//     const currentColor = el.style.backgroundColor;
+//     [r, g, b] = currentColor.match(/\d+/g)
+//     el.style.backgroundColor = `rgb(${r - (256/10)}, ${g - (256/10)}, ${b - (256/10)})`
+//     }
+// }
+
+// -- This one omits the logic about darkening and just randomises on hover but its more satisfying so I prefer it
+const colorSquare = (el) => {
+    el.style.backgroundColor = `rgb(${randomRGB()}, ${randomRGB()}, ${randomRGB()})`;
+}
+
 // Could separate concerns better? 
 const generateGrid = (numberOfSquares) => {
         for (let i = 0; i < numberOfSquares; i++) {
@@ -17,7 +39,7 @@ const generateGrid = (numberOfSquares) => {
             const square = document.createElement("div");
             square.classList.add("square");
             square.id = `square${letter}${i}`;
-            square.addEventListener("mouseover", () => {square.style.backgroundColor = `rgb(${randomRGB()}, ${randomRGB()}, ${randomRGB()})`})
+            square.addEventListener("mouseover", (event) => {colorSquare(event.target)})
             column.appendChild(square);
         }
     }
@@ -26,6 +48,7 @@ const generateGrid = (numberOfSquares) => {
 const randomRGB = () => {
     return Math.floor(Math.random() * 256)
 }
+
 
 generateGrid(numberOfSquares)
 
