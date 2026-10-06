@@ -1,6 +1,33 @@
 
+:root {
+    --etch-bg: #1e1a29;        
+    --etch-shell: #4a4260;       
+    --etch-knobs: #e3d5ca;       
+    --etch-screen: #c3b1e1;      
+    --etch-line: #2a2238;       
+
+    --etch-screen-inner-shadow: inset 0 4px 12px rgba(42, 34, 56, 0.35);
+    --etch-shell-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    --etch-line-ghost: rgba(42, 34, 56, 0.15); 
+}
+
+html {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
 .grid-container {
-   
+    display: flex;
+    width: 100vw;
+    height: 100%;
+    background-color: var(--etch-bg)
 }
 
 .column {
@@ -8,7 +35,7 @@
 }
 
 .square {
-    background-color: red;
+    background-color: var(--etch-screen);
     border: 1px solid black;
     height: 40px;
     width: 40px;
