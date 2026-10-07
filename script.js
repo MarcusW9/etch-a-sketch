@@ -2,7 +2,7 @@ const gridContainer = document.querySelector("#grid-container")
 const resetBtn = document.querySelector("#reset-btn")
 
 
-numberOfSquares = 16
+let numberOfSquares = 16
 
 // const colorSquare = (el) => {
 //     el.style.backgroundColor = `rgb(${randomRGB()}, ${randomRGB()}, ${randomRGB()})`;
