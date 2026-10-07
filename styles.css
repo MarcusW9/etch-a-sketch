@@ -1,14 +1,14 @@
 
 :root {
-    --etch-bg: #1e1a29;        
-    --etch-shell: #4a4260;       
-    --etch-knobs: #e3d5ca;       
-    --etch-screen: #c3b1e1;      
-    --etch-line: #2a2238;       
+    --etch-bg: #3d405b;        /* twilight blue */
+    --etch-shell: #e07a5f;     /* soft terracotta */
+    --etch-knobs: #f2cc8f;     /* warm sand */
+    --etch-screen: #f4f1de;    /* cream paper */
+    --etch-line: #81b29a;      /* sage */
 
-    --etch-screen-inner-shadow: inset 0 4px 12px rgba(42, 34, 56, 0.35);
-    --etch-shell-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    --etch-line-ghost: rgba(42, 34, 56, 0.15); 
+    --etch-screen-inner-shadow: inset 0 4px 12px rgba(61, 64, 91, 0.25);
+    --etch-shell-shadow: 0 10px 30px rgba(20, 20, 35, 0.35);
+    --etch-line-ghost: rgba(61, 64, 91, 0.12);
 }
 
 html {
@@ -23,20 +23,36 @@ html {
     box-sizing: inherit;
 }
 
-.grid-container {
+body {
     display: flex;
-    width: 100vw;
-    height: 100%;
-    background-color: var(--etch-bg)
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--etch-bg);
+}
+
+#grid-container {
+    display: flex;
+    flex-direction: column;
+    width: 80vmin;
+    height: 80vmin;
+}
+
+
+
+#reset-btn {
+    width: 50%;
+    justify-content: center;
 }
 
 .column {
     display: flex;
+    flex: 1;
+    justify-content: center;
 }
 
 .square {
     background-color: var(--etch-screen);
-    border: 1px solid black;
-    height: 40px;
-    width: 40px;
+    border: 1px solid var(--etch-line-ghost);
+    flex: 1; 
 }
